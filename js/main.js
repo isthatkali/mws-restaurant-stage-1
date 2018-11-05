@@ -165,10 +165,14 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.setAttribute('aria-label', restaurant.name);
+  name.setAttribute('tabindex', 0);
   li.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.setAttribute('aria-label', restaurant.neighborhood);
+  neighborhood.setAttribute('tabindex', 0);
   li.append(neighborhood);
 
   const address = document.createElement('p');
@@ -178,8 +182,6 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabIndex = '3';
-  debugger;
   li.append(more)
 
   return li
