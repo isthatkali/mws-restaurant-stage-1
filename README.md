@@ -1,32 +1,51 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews App
 
-## Project Overview: Stage 1
+## Table of Contents
+* [Intro] (#intro)
+* [Installation] (#installation)
+* [Navigation] (#navigation)
+* [Dependencies] (#dependencies)
+* [Contributing](#contributing)
+* [Potential] (#potential)
+* [SpecialThanks] (#muchasgracias)
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+## Intro
+This project began with the starter code provided by Udacity for the FEND program. The goal was to make the webpage responsive, accessible, and available offline.
 
-### Specification
+## Installation
+1. Download or clone repo from https://github.com/isthatkali/mws-restaurant-stage-1/
+2. Within folder, double click 'index.html' to open page into browser
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+## Navigation
+- Filter restaurants by Neighborhood or Cuisine
+- Results will display underneath with restaurant name, neighborhood, address
+- Click "VIEW DETAILS" to see restaurant hours, reviews, and location on map
+- Once you have decided on a restaurant, depart on your food adventure! HAPPY EATING!
 
-### What do I do from here?
+## Dependencies
+- Visual Studio Code text editor
+- HTML, CSS, JS
+- Udacity starter code for Arcade Game
+- Google Chrome browser and dev tools
+- Mapbox API
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+## Contributing
+Starter code provided by Udacity
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+## Potential
+- Add funny gif responses to errors
+- Skip map for tabbing through page
+- Add more breakpoints to change arrangement of map and reviews for shorter viewports
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
-
-## Leaflet.js and Mapbox:
-
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
-
-
-
+## Special Thanks
+- to all the online resources available out there:
+    - MDN (https://developer.mozilla.org/en-US/)
+    - W3schools (https://www.w3schools.com/)
+    - Google Developers (https://developers.google.com/)
+    - Stack Overflow for some troubleshooting (https://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error)
+- to Udacity and Udacity Resources:
+    - Udacity Restaurant Reviews App Project #5 Resources https://www.diigo.com/outliner/fjslyn/Udacity-Restaurant-Reviews-App-(project-%235)?key=zqiopam1yz
+    - Doug Brown Webinar (https://www.youtube.com/watch?v=92dtrNU1GQc)
+    - Matthew Cranford Restaurant Reviews App Walkthrough for some guidance (https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/)
+    - Slack channel and Udacity Knowledge forums
+    - Udacity reviewers and their feedback
