@@ -26,31 +26,33 @@ self.addEventListener('install', event => {
   );
 });
 
-// Activate service worker
+// // Activate service worker
 self.addEventListener('activate', event => {
   console.log('v1 ready');
 });
 
-// Add responses to fetch events (referenced: https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/)
+// Response to 404 errors
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    fetch(event.request)
+    .then(response => {
+      if(response.status == 404) {
+        return new Response("awh heck, not found!");
+      }
+      return response;
+    }).catch(() => {
+      return new Response("well this failed...sorry homies");
+    })
+  );
+});
+
+// Responses to requests (referenced: https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/)
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
     .then(response => {
-      if (response) {
-        console.log('Yayers! Found ', event.request, ' in cache');
-        return response;
-      } else {
-        console.log('Oh noess! Could not find ', event.request, ' in cache...');
-        return fetch(event.request)
-        .then(response => {
-          caches.open('v1')
-          .then(cache => {
-            cache.put(event.request, response);
-          }).catch(error => {
-            console.log(error);
-          });
-        })
-      }
+      if (response) return response;
+      return fetch(event.request);
     })
   );
 });
