@@ -1,6 +1,6 @@
 // Add service worker (referenced: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/js/sw.js')
+  navigator.serviceWorker.register('/sw.js')
   .then(ok => {
     console.log('reg okay');
   }).catch(err => {
